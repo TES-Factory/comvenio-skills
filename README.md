@@ -26,19 +26,19 @@ Rechte sichtbaren `comvenio action`-Funktionen.
 Alle Comvenio Skills für alle erkannten Assistenten installieren:
 
 ```bash
-npx skills add Comvenio/comvenio-skills --all
+npx skills add TES-Factory/comvenio-skills --all
 ```
 
 Nur einen bestimmten Skill installieren:
 
 ```bash
-npx skills add Comvenio/comvenio-skills --skill comvenio-events -y
+npx skills add TES-Factory/comvenio-skills --skill comvenio-events -y
 ```
 
 Verfügbare Skills vor der Installation anzeigen:
 
 ```bash
-npx skills add Comvenio/comvenio-skills --list
+npx skills add TES-Factory/comvenio-skills --list
 ```
 
 ## Verfügbare Skills
@@ -132,12 +132,12 @@ npx skills remove comvenio-events
 ## Support
 
 Fehler und Verbesserungsvorschläge können im
-[GitHub-Repository](https://github.com/Comvenio/comvenio-skills/issues)
+[GitHub-Repository](https://github.com/TES-Factory/comvenio-skills/issues)
 gemeldet werden. Bitte keine Zugriffstoken, Passwörter oder personenbezogenen
 Vereinsdaten in öffentliche Issues schreiben.
 
 Nutzen Sie das passende
-[Issue-Formular](https://github.com/Comvenio/comvenio-skills/issues/new/choose).
+[Issue-Formular](https://github.com/TES-Factory/comvenio-skills/issues/new/choose).
 Sicherheitsprobleme werden gemäß [SECURITY.md](SECURITY.md) ausschließlich
 privat gemeldet.
 

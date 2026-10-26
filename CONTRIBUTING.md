@@ -13,14 +13,14 @@ gedacht.
    [SECURITY.md](SECURITY.md).
 
 Nutzen Sie anschließend das passende
-[Issue-Formular](https://github.com/Comvenio/comvenio-skills/issues/new/choose).
+[Issue-Formular](https://github.com/TES-Factory/comvenio-skills/issues/new/choose).
 
 ## Änderungen lokal prüfen
 
 Voraussetzung ist Node.js 20 oder neuer.
 
 ```bash
-git clone https://github.com/Comvenio/comvenio-skills.git
+git clone https://github.com/TES-Factory/comvenio-skills.git
 cd comvenio-skills
 npm install
 npm test

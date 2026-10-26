@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "1.0",
+  "commands": [
+    { "id": "validate", "kind": "test", "program": "npm.cmd", "args": ["run", "test"], "required": true, "timeoutSeconds": 300, "changedFileExtensions": ["md", "json", "yml", "yaml", "mjs"] }
+  ]
+}
