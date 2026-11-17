@@ -43,9 +43,9 @@ comvenio-skills ist das öffentliche Paket der Agent Skills für Vereinsverantwo
 
 ## Use Cases
 
-**UC-1 Skills installieren.** Akteur: Vereinsverantwortliche mit ihrem KI-Assistenten. Auslöser: `npx skills add TES-Factory/comvenio-skills --all` oder `--skill <name>`. Ablauf: Der Assistent übernimmt die Skills; Voraussetzung sind das installierte `comvenio` CLI und eine bestätigte `comvenio login`-Anmeldung. Ergebnis: Assistent kennt die Arbeitsabläufe je Bereich. <!-- q: commit:6b0bd23; commit:887cc88; geraetetoken-abbau-01 §3 -->
+**UC-1 Skills installieren.** Akteur: Vereinsverantwortliche mit ihrem KI-Assistenten. Auslöser: `npx skills add TES-Factory/comvenio-skills --all` oder `--skill <name>`. Ablauf: Der Assistent übernimmt die Skills; Voraussetzung sind das installierte `comvenio` CLI und eine bestätigte `comvenio login`-Anmeldung. Ergebnis: Assistent kennt die Arbeitsabläufe je Bereich. <!-- q: commit:6b0bd23; commit:887cc88; geraetetoken-abbau-01 §3; comvenio-ai-connector-03 -->
 
-**UC-2 Vereinsarbeit über einen Skill.** Akteur: KI-Assistent im Auftrag eines Vereinsverantwortlichen. Auslöser: Anliegen in Vereinssprache, etwa eine Trainingsserie oder eine Speisekarte. Ablauf: Der Skill beginnt mit `comvenio whoami --json` und `comvenio action list`, liest den Stand, ruft Actions mit `comvenio action call <action-id> --input '<json>' --json` und bestätigt kritische Actions mit `comvenio action confirm`; fehlt eine Action, beschreibt er den Weg in der Web-App. Ergebnis: Änderung im angemeldeten Verein nach den Rechten des Menschen. <!-- q: geraetetoken-abbau-01 §4.3; geraetetoken-abbau-01; commit:d29eb95; commit:d2ab764 -->
+**UC-2 Vereinsarbeit über einen Skill.** Akteur: KI-Assistent im Auftrag eines Vereinsverantwortlichen. Auslöser: Anliegen in Vereinssprache, etwa eine Trainingsserie oder eine Speisekarte. Ablauf: Der Skill beginnt mit `comvenio whoami --json` und `comvenio action list`, liest den Stand, ruft Actions mit `comvenio action call <action-id> --input '<json>' --json` und bestätigt kritische Actions mit `comvenio action confirm`; fehlt eine Action, beschreibt er den Weg in der Web-App. Ergebnis: Änderung im angemeldeten Verein nach den Rechten des Menschen. <!-- q: geraetetoken-abbau-01 §4.3; geraetetoken-abbau-01; commit:d29eb95; commit:d2ab764; comvenio-ai-connector-03 -->
 
 **UC-3 Katalog erneuern.** Akteur: Comvenio-Team. Auslöser: neue Connector-Actions in comvenio-cli. Ablauf: `node scripts/sync-action-catalog.mjs <pfad-zu-comvenio-cli> [--ref origin/main]` liest aus jedem Themenartikel den erzeugten Abschnitt „Befehle und Actions“ und schreibt `catalog/actions.json` mit Kennung, Bereich, Teilaktionen, Risiko, Scopes und Artikel je Action. Ergebnis: Katalog im Stand der Kundendoku. <!-- q: geraetetoken-abbau-01 §4.2; code:scripts/sync-action-catalog.mjs#listArticles; code:scripts/sync-action-catalog.mjs#readArticle; code:scripts/sync-action-catalog.mjs#parseRisks -->
 
@@ -112,7 +112,7 @@ Genutzt von: —
 ## Regeln
 
 - Skills nennen nur Befehle der Befehlsfläche und Action-IDs aus dem Katalog; Aufrufe mit `--json`. <!-- q: geraetetoken-abbau-01; code:scripts/validate-skills.mjs#checkCommands -->
-- Jeder Skill beginnt mit `comvenio whoami --json` und `comvenio action list`; kritische Actions laufen über `comvenio action confirm`, nie mit einem getippten Ja. <!-- q: geraetetoken-abbau-01; commit:d2ab764 -->
+- Jeder Skill beginnt mit `comvenio whoami --json` und `comvenio action list`; kritische Actions laufen über `comvenio action confirm`, nie mit einem getippten Ja. <!-- q: geraetetoken-abbau-01; commit:d2ab764; comvenio-ai-connector-24 -->
 - `--input` trägt nie `club_id` oder eine Bestätigung — die Anmeldung bindet den Verein, `action confirm` trägt die Bestätigung. <!-- q: code:scripts/validate-skills.mjs#inputPayloads; commit:02d9125 -->
 - Fehlt eine Action, beschreibt der Skill den Weg in der Web-App mit Menüpfad, ohne Befehl und ohne versteckte Schnittstelle. <!-- q: geraetetoken-abbau-01 §4.3 -->
 - Kein neues Recht: Was erlaubt ist, entscheiden Scopes und Rolle im Verein. <!-- q: geraetetoken-abbau-01 -->
