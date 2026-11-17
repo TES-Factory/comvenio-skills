@@ -1,0 +1,124 @@
+erzeugt_aus:
+  werkzeug_version: '1'
+teilsysteme:
+- kennung: skills-katalog
+  dateien:
+  - catalog/actions.json
+  - scripts/fixtures/basis/catalog/actions.json
+  - scripts/fixtures/basis/skills/comvenio-beispiel/README.md
+  - scripts/fixtures/basis/skills/comvenio-beispiel/SKILL.md
+  - scripts/fixtures/basis/skills/comvenio-beispiel/evals/evals.json
+  - scripts/fixtures/sync-basis/docs/fehlerbilder.md
+  - scripts/fixtures/sync-basis/docs/verein.md
+  - scripts/fixtures/sync-basis/docs/zonen.md
+  - scripts/fixtures/sync-eingerueckt/docs/verein.md
+  - scripts/fixtures/sync-leerer-abschnitt/docs/aufgaben.md
+  - scripts/fixtures/sync-ohne-block/docs/aufgaben.md
+  - scripts/fixtures/sync-unlesbar/docs/verein.md
+  - scripts/fixtures/tc-01-klassischer-befehl/SKILL.md
+  - scripts/fixtures/tc-02-action-unbekannt/SKILL.md
+  - scripts/fixtures/tc-06-ausnahmemarke/SKILL.md
+  - scripts/fixtures/tc-06-ohne-marke/SKILL.md
+  - scripts/fixtures/tc-07-fortsetzung-json/evals/evals.json
+  - scripts/fixtures/tc-07-fortsetzung/SKILL.md
+  - scripts/fixtures/tc-08-input-felder/SKILL.md
+  - scripts/fixtures/tc-08-input-felder/evals/evals.json
+  - scripts/fixtures/tc-09-marke-ohne-block/SKILL.md
+  - scripts/fixtures/tc-10-json-klassisch/evals/evals.json
+  - scripts/fixtures/tc-11-kennzeichnung-kommentar/SKILL.md
+  - scripts/fixtures/tc-11-marke-ohne-kennzeichnung/SKILL.md
+  - scripts/sync-action-catalog.mjs
+  - scripts/test-validate-skills.mjs
+  - scripts/validate-skills.mjs
+  - skills/comvenio-bookings/README.md
+  - skills/comvenio-bookings/SKILL.md
+  - skills/comvenio-bookings/evals/evals.json
+  - skills/comvenio-cli/README.md
+  - skills/comvenio-cli/SKILL.md
+  - skills/comvenio-cli/evals/evals.json
+  - skills/comvenio-club-onboarding/README.md
+  - skills/comvenio-club-onboarding/SKILL.md
+  - skills/comvenio-club-onboarding/evals/evals.json
+  - skills/comvenio-club/README.md
+  - skills/comvenio-club/SKILL.md
+  - skills/comvenio-club/evals/evals.json
+  - skills/comvenio-data/README.md
+  - skills/comvenio-data/SKILL.md
+  - skills/comvenio-data/evals/evals.json
+  - skills/comvenio-event-day/README.md
+  - skills/comvenio-event-day/SKILL.md
+  - skills/comvenio-event-day/evals/evals.json
+  - skills/comvenio-events/README.md
+  - skills/comvenio-events/SKILL.md
+  - skills/comvenio-events/evals/evals.json
+  - skills/comvenio-homepage/README.md
+  - skills/comvenio-homepage/SKILL.md
+  - skills/comvenio-homepage/evals/evals.json
+  - skills/comvenio-homepage/references/qualitaetsrezept.md
+  - skills/comvenio-meetings/README.md
+  - skills/comvenio-meetings/SKILL.md
+  - skills/comvenio-meetings/evals/evals.json
+  - skills/comvenio-members/README.md
+  - skills/comvenio-members/SKILL.md
+  - skills/comvenio-members/evals/evals.json
+  - skills/comvenio-news/README.md
+  - skills/comvenio-news/SKILL.md
+  - skills/comvenio-news/evals/evals.json
+  - skills/comvenio-plans/README.md
+  - skills/comvenio-plans/SKILL.md
+  - skills/comvenio-plans/evals/evals.json
+  - skills/comvenio-season-planner/README.md
+  - skills/comvenio-season-planner/SKILL.md
+  - skills/comvenio-season-planner/evals/evals.json
+  - skills/comvenio-sponsors/README.md
+  - skills/comvenio-sponsors/SKILL.md
+  - skills/comvenio-sponsors/evals/evals.json
+  - skills/comvenio-supply/README.md
+  - skills/comvenio-supply/SKILL.md
+  - skills/comvenio-supply/evals/evals.json
+  - skills/comvenio-tasks/README.md
+  - skills/comvenio-tasks/SKILL.md
+  - skills/comvenio-tasks/evals/evals.json
+  - skills/comvenio-tournaments/README.md
+  - skills/comvenio-tournaments/SKILL.md
+  - skills/comvenio-tournaments/evals/evals.json
+  - skills/comvenio-volunteers/README.md
+  - skills/comvenio-volunteers/SKILL.md
+  - skills/comvenio-volunteers/evals/evals.json
+  tabellen: []
+  routen: []
+  cli: []
+  hooks: []
+  ereignisse: []
+  zustaende: []
+  parameter: []
+  symbole:
+  - name: category
+    datei: scripts/sync-action-catalog.mjs
+  - name: fail
+    datei: scripts/sync-action-catalog.mjs
+  - name: git
+    datei: scripts/sync-action-catalog.mjs
+  - name: listArticles
+    datei: scripts/sync-action-catalog.mjs
+  - name: parseRisks
+    datei: scripts/sync-action-catalog.mjs
+  - name: readArticle
+    datei: scripts/sync-action-catalog.mjs
+  - name: copyCase
+    datei: scripts/test-validate-skills.mjs
+  - name: checkCommands
+    datei: scripts/validate-skills.mjs
+  - name: inputPayloads
+    datei: scripts/validate-skills.mjs
+  - name: joinContinuations
+    datei: scripts/validate-skills.mjs
+  - name: listFiles
+    datei: scripts/validate-skills.mjs
+  - name: scanFile
+    datei: scripts/validate-skills.mjs
+  zeitgeber: []
+  nutzt: []
+  genutzt_von: []
+nicht_zugeordnet: []
+nicht_gelesen: []
