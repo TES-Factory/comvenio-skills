@@ -1,0 +1,6 @@
+{
+  "*.mjs": "teilsysteme/skills-katalog.md",
+  "catalog/**": "teilsysteme/skills-katalog.md",
+  "scripts/**": "teilsysteme/skills-katalog.md",
+  "skills/**": "teilsysteme/skills-katalog.md"
+}
